@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "237916969386",
+    "project_id": "app-agenda---jc32",
+    "storage_bucket": "app-agenda---jc32.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:237916969386:android:994875e3dd4fcc4a0c33d3",
+        "android_client_info": {
+          "package_name": "com.elias.appagenda_kotlin_jc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDFxTANM0QVzu2ToXc3AJQWqR22VZG2Zks"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
