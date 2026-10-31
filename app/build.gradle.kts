@@ -45,6 +45,8 @@ dependencies {
     implementation(libs.firebaseFirestore)
     implementation(libs.navigation)
 
+    implementation(libs.androidx.compose.material.icons.extended)
+
     //implementation("com.google.firebase:firebase-analytics")
     //implementation(platform("com.google.firebase:firebase-bom:34.18.0"))
 

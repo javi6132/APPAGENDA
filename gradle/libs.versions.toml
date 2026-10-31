@@ -34,6 +34,8 @@ firebaseAuth={group="com.google.firebase", name="firebase-auth", version.ref="fi
 firebaseFirestore={group="com.google.firebase", name="firebase-firestore", version.ref="firebaseFirestoreV"}
 navigation = {group = "androidx.navigation", name = "navigation-compose", version.ref="navigationV"}
 
+androidx-compose-material-icons-extended = {group = "androidx.compose.material", name = "material-icons-extended"}
+
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }

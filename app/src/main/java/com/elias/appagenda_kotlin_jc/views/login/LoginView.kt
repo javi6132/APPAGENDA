@@ -82,7 +82,7 @@ fun LoginView(navController: NavController, loginVM: loginViewModel){
 
         Spacer(modifier = Modifier.height(20.dp))
 
-        //Boton de login
+        //Boton de registro
         Button(onClick ={ navController.navigate(route = "Register")},
             modifier = Modifier.fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)){
@@ -90,7 +90,11 @@ fun LoginView(navController: NavController, loginVM: loginViewModel){
         }
 
         //Boton de login
-        Button(onClick ={ /*TODO*/},
+        Button(onClick ={ loginVM.login(email, password)
+        {
+           navController.navigate("Home")
+        } },
+
             modifier = Modifier.fillMaxWidth()
                 .padding(start = 20.dp, end = 20.dp)){
             Text(text = "Ingresar")

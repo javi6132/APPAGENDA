@@ -1,11 +1,57 @@
 package com.elias.appagenda_kotlin_jc.views.notes
 
+
+import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ExitToApp
+import androidx.compose.material3.Button
+import androidx.compose.material3.ExperimentalMaterial3Api
+import androidx.compose.material3.Icon
+import androidx.compose.material3.IconButton
+import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
+import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.elias.appagenda_kotlin_jc.viewModels.NotesViewModel
 
+@OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun HomeView(navController: NavController, notesVM: NotesViewModel){
-    Text(text = "Inicio")
+fun HomeView(navController: NavController, notesVM: NotesViewModel)
+{
+    Scaffold(
+        topBar =
+            {
+            TopAppBar(title = { Text(text = "Inicio") },
+
+                actions = {
+                    IconButton(onClick = {
+                        notesVM.LogOut()//nuevo
+                        navController.popBackStack()//nuevo
+
+                    }) { Icon(imageVector = Icons.AutoMirrored.Filled.ExitToApp,
+                        contentDescription = "") }
+                })
+        }
+    ){ padding ->
+        Column(modifier = Modifier.padding(padding),
+            horizontalAlignment = Alignment.CenterHorizontally) {
+
+            //BOTON GUARDAR NOTAS
+            Button(onClick = { navController.navigate("AddNote")},
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(start = 30.dp, end = 30.dp))
+            {
+                Text(text = "Agregar Nota")
+            }
+
+        }
+    }
 }
