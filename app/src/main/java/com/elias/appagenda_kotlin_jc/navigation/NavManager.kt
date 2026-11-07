@@ -11,6 +11,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.elias.appagenda_kotlin_jc.views.login.checksesion
 import com.elias.appagenda_kotlin_jc.views.notes.AddNotesView
+import com.elias.appagenda_kotlin_jc.views.notes.AllNotesView
 import com.elias.appagenda_kotlin_jc.views.notes.HomeView
 import com.elias.appagenda_kotlin_jc.views.register.RegisterView
 
@@ -42,6 +43,10 @@ fun NavManager(loginVM : loginViewModel, registerVM : RegisterViewModel, notesVM
 
         composable(route = "AddNote"){
             AddNotesView(navController, notesVM )
+        }
+
+        composable(route = "AllNotes"){
+            AllNotesView(navController, notesVM )
         }
     }
 

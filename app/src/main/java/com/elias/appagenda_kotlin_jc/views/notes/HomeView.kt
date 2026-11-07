@@ -17,6 +17,7 @@ import androidx.compose.material3.TopAppBar
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.blur
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 import com.elias.appagenda_kotlin_jc.viewModels.NotesViewModel
@@ -51,6 +52,15 @@ fun HomeView(navController: NavController, notesVM: NotesViewModel)
             {
                 Text(text = "Agregar Nota")
             }
+
+            // BOTON DE MIS NOTAS
+            Button(onClick = {navController.navigate("AllNotes")},
+               modifier = Modifier
+                   .fillMaxWidth()
+                   .padding(start = 20.dp, end = 20.dp))
+            { Text(text = "Ver mis notas") }
+
+
 
         }
     }
