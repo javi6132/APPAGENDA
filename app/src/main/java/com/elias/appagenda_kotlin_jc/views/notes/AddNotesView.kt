@@ -31,7 +31,7 @@ import com.elias.appagenda_kotlin_jc.viewModels.NotesViewModel
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
 
-fun AddNotesView(navController: NavController, notesViewModel: NotesViewModel)
+fun AddNoteView(navController: NavController, notesViewModel: NotesViewModel)
 {
     var title by remember { mutableStateOf("") }
     var description by remember { mutableStateOf("") }
@@ -61,7 +61,7 @@ fun AddNotesView(navController: NavController, notesViewModel: NotesViewModel)
             horizontalAlignment = Alignment.CenterHorizontally)
         {
             //EVENTO ONCLICK // Sin definir
-            Button(onClick = {} ) { }
+            //Button(onClick = {} ) { }
 
             //DISEÑO PARA TITULO
             OutlinedTextField(

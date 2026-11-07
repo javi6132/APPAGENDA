@@ -27,8 +27,7 @@ import com.elias.appagenda_kotlin_jc.viewModels.NotesViewModel
 fun HomeView(navController: NavController, notesVM: NotesViewModel)
 {
     Scaffold(
-        topBar =
-            {
+        topBar = {
             TopAppBar(title = { Text(text = "Inicio") },
 
                 actions = {
@@ -36,8 +35,7 @@ fun HomeView(navController: NavController, notesVM: NotesViewModel)
                         notesVM.LogOut()//nuevo
                         navController.popBackStack()//nuevo
 
-                    }) { Icon(imageVector = Icons.AutoMirrored.Filled.ExitToApp,
-                        contentDescription = "") }
+                    }) { Icon(imageVector = Icons.AutoMirrored.Filled.ExitToApp,contentDescription = "") }
                 })
         }
     ){ padding ->
